@@ -1,0 +1,75 @@
+Before you start read about this commands
+  - git init,
+  - git add,
+  - git commit,
+  - git branch,
+  - git checkout,
+  - how to combine git commits
+  - git merge branch,
+  - git rebase branch
+
+NOTE: Generate your own commit messages
+
+task 1:
+You must have a branch with 3 commits with each commit adding a seperate file.
+
+VISUAL DEMO:
+* (add file 3)
+| 
+* (add file 2)
+|
+* (add file 1)
+
+task 2:
+Suppose you have a commit where you added a file. Create 2 new branches from
+that commit and edit that file differently in both branches and commit the changes. Use git checkout <branch> to understand that your file changes
+correctly when changing the branch.
+
+VISUAL DEMO:
+(deleted "hello" from file1) *   * (deleted "world" from file1)
+                              \ /
+  (add "hello world" to file1) *
+
+task 3:
+You must have 2 branches with 3 commits each. In each commit you must add 
+seperate files with the same name in both branches, but with different content
+in them.
+
+VISUAL DEMO:
+(add file 3 and hello 3 in it) * * (add file 1 and world 1 in it)
+                               | |
+(add file 2 and hello 2 in it) * * (add file 1 and world 1 in it)
+                               | |
+(add file 1 and hello 1 in it) * * (add file 1 and world 1 in it)
+                               |/
+                               *
+
+task 4:
+Create a branch with 4 commits in it. Combine that commits in 2 commit
+by combining last 3 commits.
+
+VISUAL DEMO:
+Before git rebase
+* (commit 4)
+|
+* (commit 3)
+|
+* (commit 2)
+|
+* (commit 1)
+
+After git rebase
+* (commits 2, 3, 4 combined)
+|
+* (commit 1)
+
+task 5.
+Guys, I have found a greate visualizer of git commits. Play with it and you 
+will understand lots of things. 
+https://git-school.github.io/visualizing-git/
+
+You can create commits, branches, merge branches, do rebases but some 
+commands do not work normally, so be careful.
+NOTE 1: After each commit look where HEAD points at and branch names.
+NOTE 2: The default branch is master
+NOTE 3: use command "clear" to reset all commits
